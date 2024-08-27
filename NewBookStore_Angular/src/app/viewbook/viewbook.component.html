@@ -1,0 +1,106 @@
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    th, td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+
+    .book-title {
+        font-size: 1.2em;
+        color: #333;
+    }
+
+    .book-author {
+        color: #666;
+    }
+
+    .btn{
+        background-color: #04AA6D;
+        border: none;
+        color: white;
+        padding: 10px 25px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        justify-content: center;
+        /* margin-left:680px; */
+    }
+    .btn a{
+        text-decoration: none;
+        color: white;
+    }
+</style>
+<br>
+<h1>Books Available In Our Store</h1><br>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Book Code</th>
+                <th>Book Name</th>
+                <th>Book Author</th>
+                <th>Book Price</th>
+                <th>Quantity</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="book-title">101</td>
+                <td class="book-author">The India Story</td>
+                <td>Bimal Jalal</td>
+                <td>$10.99</td>
+                <td>1</td>
+                <td>
+                    <a href=""><button class="btn btn-danger" type="button">Edit</button></a>
+                    <a href=""><button class="btn btn-danger" onclick="return confirm('Are You Sure ?');" type="button">Delete</button></a>
+                </td>
+            </tr>
+            <tr>
+                <td class="book-title">102</td>
+                <td class="book-author">Listen to Your Heart: The London Adventure</td>
+                <td>Ruskin Bond</td>
+                <td>$12.99</td>
+                <td>2</td>
+                <td>
+                    <a href=""><button class="btn btn-danger" type="button">Edit</button></a>
+                    <a href=""><button class="btn btn-danger" onclick="return confirm('Are You Sure ?');" type="button">Delete</button></a>
+                </td>
+            </tr>
+            <tr>
+                <td class="book-title">103</td>
+                <td class="book-author">A Place Called Home</td>
+                <td>Preeti Shenoy</td>
+                <td>$9.99</td>
+                <td>5</td>
+                <td>
+                    <a href=""><button class="btn btn-danger" type="button">Edit</button></a>
+                    <a href=""><button class="btn btn-danger" onclick="return confirm('Are You Sure ?');" type="button">Delete</button></a>
+                </td>
+            </tr>
+            
+        </tbody>
+    </table>

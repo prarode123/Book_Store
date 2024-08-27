@@ -1,0 +1,259 @@
+ <!-- <style>
+    
+    input {
+        padding: 0px 0px;
+        margin: 2px 0;
+        box-sizing: border-box;
+        border-radius: 0px;
+        font-size: 20px;
+    }
+    .addbook{
+        text-align: center;
+        font-size: 30px;
+        background-color: white;
+        color: brown;
+        width:40%;
+        margin-left:30%;
+    }
+    label
+    {
+        color: green;
+    }
+    
+    .btn{
+                background-color: #04AA6D;
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                justify-content: center;
+                align-items: center; 
+            }
+            .btn a{
+                text-decoration: none;
+                color: white;
+            }
+    </style> 
+
+<form action="userreg" method="post">
+    <table class="tab" style="width:40%">
+        <h1 class="addbook">Add Book</h1>
+        <tr>
+            <td>
+            <br>
+            <label for="bookid" style="margin-right: 5%"> Book Id : </label> 
+                <input type="number" name="bookid" id="bookid"
+                 [(ngModel)]="id">
+            <br>
+            <br>
+            <label for="bookcode" style="margin-right: 5%"> Book Code : </label> 
+                <input type="number" name="bookcode" id="bookcode"
+                 [(ngModel)]="code">
+            <br>
+            <br>
+            <label for="bookname">Book Name :&nbsp; </label> 
+            <input
+                type="text" name="bookname" id="bookname"
+                [(ngModel)]="name">
+            <br>
+            <br>
+            <label for="bookauthor">Book Author : </label> 
+            <input
+                type="text" name="bookname" id="bookname"
+                [(ngModel)]="author">
+            <br>
+            <br>
+            <label for="bookprice">Book Price : </label> 
+            <input
+                type="number" name="bookname" id="bookname"
+                [(ngModel)]="price">
+            <br>
+            <br>
+            <label for="bookquantity">Book Quantity : </label> 
+            <input
+                type="number" name="bookquantity" id="bookquantity"
+                [(ngModel)]="qnt">
+            <br>
+            <br>
+            
+           
+            <button type="submit" (click)="add()" class="btn">Add These Book</button>
+            </td>
+        </tr>
+    
+    </table>
+    
+</form> -->
+
+
+<!-- <table border="1" class="table">
+    <tr class="tr">
+      <td>Id</td>
+      <td>Code</td>
+      <td>Name</td>
+      <td>Author</td>
+      <td>Price</td>
+      <td>Qnt</td>
+    </tr>
+   
+      <tr *ngFor="let obj of list">
+      <td>{{obj.id}}</td>
+      <td>{{obj.code}}</td>
+      <td>{{obj.name}}</td>
+      <td>{{obj.author}}</td>
+      <td>{{obj.price}}</td>
+      <td>{{obj.qnt}}</td>
+      <td>
+        <button (click)="delete(obj)">Delete</button>
+       </tr>
+  </table>
+   -->
+  
+  
+   
+
+
+
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blood Bank System - Donor Details</title>
+<style>
+    body 
+    {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+
+    .container 
+    {
+        width: 600px;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 
+    {
+        text-align: center;
+        color: #333;
+    }
+
+    input[type="text"], input[type="number"], input[type="email"], select {
+        /* width: calc(100% - 20px); */
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+    .btnn{
+                background-color: #04AA6D;
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                justify-content: center;
+                align-items: center; 
+            }
+            .btnn a{
+                text-decoration: none;
+                color: white;
+            }
+
+            table {
+                width: 70%;
+                border-collapse: collapse;
+                margin-left:20%;
+            }
+
+             th,td {
+                padding: 8px;
+                text-align: left;
+                border-bottom: 1px solid #ddd;
+            }
+
+            th {
+                background-color: #f2f2f2;
+            }
+
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Add Book</h2>
+        <br>
+<!-- Id:<input type="number" [(ngModel)]="id"><br> -->
+Code:<input type="number" [(ngModel)]="code"><br>
+Name:<input type="text" [(ngModel)]="name"><br>
+Author:<input type="text" [(ngModel)]="author"><br>
+Price:<input type="number" [(ngModel)]="price"><br>
+Quantiy:<input type="number" [(ngModel)]="qnt"><br>
+<!-- <button (click)="add1()" class="btn">Add</button><br><br> -->
+<button type="submit" (click)="add1()" class="btnn"><a href="addbook">Add These Book</a> </button>
+
+</div>
+</body>
+</html>
+
+<h2>View Book</h2><br>
+<table border="1" class="table">
+    <tr class="tr">
+      <!-- <th>Id</th> -->
+      <th>Code</th>
+      <th>Name</th>
+      <th>Author</th>
+      <th>Price</th>
+      <th>Qnt</th>
+      <th>Action</th>
+    </tr>
+   
+      <tr *ngFor="let obj of list">
+      <!-- <td>{{obj.id}}</td> -->
+      <td>{{obj.code}}</td>
+      <td>{{obj.name}}</td>
+      <td>{{obj.author}}</td>
+      <td>{{obj.price}}</td>
+      <td>{{obj.qnt}}</td>
+      <!-- <td>
+        <button (click)="delete(obj)" class="btn">Delete</button>
+    </td> -->
+
+        <td>
+            <a href="updatebook"><button class="btn btn-success" type="button">Edit</button></a>
+            <a href="addbook"><button (click)="delete(obj)" class="btn btn-danger" onclick="return confirm('Are You Sure ?');" type="button">Delete</button></a>
+        </td>
+
+       </tr>
+  </table>
+  

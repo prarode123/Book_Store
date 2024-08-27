@@ -1,0 +1,45 @@
+<style>
+table {
+                width: 70%;
+                border-collapse: collapse;
+                margin-left:20%;
+            }
+
+             th,td {
+                padding: 8px;
+                text-align: left;
+                border-bottom: 1px solid #ddd;
+            }
+
+            th {
+                background-color: #f2f2f2;
+            }
+            h2 
+            {
+             text-align: center;
+             color: #333;
+            }
+
+</style>
+
+<h2>View Register Data</h2><br>
+<table border="1" class="table">
+    <tr class="tr">
+      <th>Id</th>
+      <th>Username</th>
+      <th>email</th>
+      <th>Password</th>
+      <th>Action</th>
+    </tr>
+   
+      <tr *ngFor="let obj of list">
+      <td>{{obj.id}}</td>
+      <td>{{obj.username}}</td>
+      <td>{{obj.email}}</td>
+      <td>{{obj.password}}</td>
+        <td>
+            <a href="viewreg"><button (click)="delete(obj)" class="btn btn-danger" onclick="return confirm('Are You Sure ?');" type="button">Delete</button></a>
+        </td>
+       </tr>
+  </table>
+  
